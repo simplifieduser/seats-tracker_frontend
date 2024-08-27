@@ -47,9 +47,6 @@
 
     const sessionRes = await fetchRes.json() as PostSessions
 
-    //TODO: Correct user role handling
-    if ((sessionRes.privilege || "") !== "admin") return
-
     $loginSession = sessionRes
 
     errorMsg = ""
