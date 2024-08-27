@@ -2,6 +2,7 @@
 <script lang="ts">
   import { roomViewSelectedRoom, API_BASE, roomViewSelectedSeat } from "../../global";
   import type { GetAllSeats, GetRoom } from "../../types";
+    import RoomViewEdit from "./RoomViewEdit.svelte";
   import RoomViewMatrix from "./RoomViewMatrix.svelte";
 
   let room: Promise<GetRoom> = new Promise(async (res, rej) => {
@@ -56,7 +57,9 @@
 
       {:then seats} 
 
-          <RoomViewMatrix {room} {seats}></RoomViewMatrix>
+        <RoomViewMatrix {room} {seats}></RoomViewMatrix>
+
+        <RoomViewEdit></RoomViewEdit>
 
       {/await}
 

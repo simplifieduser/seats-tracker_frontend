@@ -58,7 +58,7 @@
       {#each matrix as _, rowIdx}
 
       <div class="w-8 h-8 flex justify-center items-center bg-slate-800">
-        <p class="text-slate-100">{rowIdx}</p>
+        <p class="text-slate-100">{rowIdx + 1}</p>
       </div>
 
       {/each}
