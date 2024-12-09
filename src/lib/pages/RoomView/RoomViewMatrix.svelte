@@ -50,6 +50,8 @@
 
   })
 
+  const chars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
 </script>
 <div class="w-full relative p-3">
   <div class="absolute">
@@ -58,7 +60,7 @@
       {#each matrix as _, rowIdx}
 
       <div class="w-8 h-8 flex justify-center items-center bg-slate-800">
-        <p class="text-slate-100">{rowIdx + 1}</p>
+        <p class="text-slate-100">{chars[rowIdx] || ""}</p>
       </div>
 
       {/each}
