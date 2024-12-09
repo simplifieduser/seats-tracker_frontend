@@ -24,6 +24,14 @@
 
 </script>
 
+<svelte:head>
+  {#await room}
+    <title>Seat-Tracker | List</title>
+  {:then room}
+    <title>Seat-Tracker | {room.name}</title>
+  {/await}
+</svelte:head>
+
 {#await room}
 
   <main class="max-w-[1200px] w-[95%] bg-slate-700 m-auto mt-6 mb-6 p-6 rounded-2xl flex flex-col gap-6">

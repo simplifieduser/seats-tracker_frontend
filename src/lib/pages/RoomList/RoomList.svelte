@@ -13,6 +13,10 @@
 
 </script>
 
+<svelte:head>
+  <title>Seat-Tracker | List</title>
+</svelte:head>
+
 <main class="max-w-[1200px] w-[95%] bg-slate-700 m-auto mt-6 mb-6 p-6 rounded-2xl flex flex-sp gap-6 flex-wrap">
 
   {#await rooms}
